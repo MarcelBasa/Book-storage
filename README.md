@@ -25,7 +25,7 @@ Book Storage is a web application for searching books using a public API and add
     ```
 2. Navigate to the project directory:
     ```sh
-    cd book-storage
+    cd Book-storage
     ```
 3. Install dependencies:
     ```sh
