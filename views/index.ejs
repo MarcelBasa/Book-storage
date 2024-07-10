@@ -1,7 +1,32 @@
 <%- include("partials/header.ejs") %>
 
 <body>
-    
+    <div class="container">
+    <% if(locals.books) { %>
+        <% books.forEach((book) => { %>
+            <div class="card">
+                <div class="card-image">
+                    <img src= <%= "https://covers.openlibrary.org/b/id/"+book.cover_id+"-M.jpg" %> height="270" width="180" alt="Book img"/>
+                </div>
+                <div class="card-text">
+                    <br/><br/><br/><br/>
+                    <p><b>Title:</b> <%= book.title %></p>
+                    <p><b>Author:</b> <%= book.author %></p>
+                    <p><b>Release date:</b> <%= book.date %></p>
+                </div>
+                <div class="card-note">
+                    <hr>
+                    <p><b>Note:</b></p>
+                    <p><%= book.note %></p>
+                </div>
+                
+            <input type = "button" data-index=<%= book.cover_id %> class="edit-button" value="Edit"/>
+            <input type = "button" data-index=<%= book.cover_id %> class="delete-button" value="Delete"/>
+            </div>
+        <% }); %>
+    <% } %>
+    </div>
+    <script src="/script.js"></script>
 </body>
 
 <%- include("partials/footer.ejs") %>

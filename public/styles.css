@@ -1,0 +1,96 @@
+*{
+    font-family: Georgia;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.card{
+    border: 1px solid black;
+    flex-shrink: 0;
+    margin: 10px;
+    padding: 10px;
+    flex-basis: 500px;
+}
+
+.card-image{
+    float: left;
+    width: 180px;
+    height: 270px;
+}
+
+.card-text{
+    float: left;
+    width: 45%;
+    height: 270px;
+    padding-left: 10px;
+}
+
+.card-note{
+    clear: both;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.card-note > hr{
+    width: 50%;
+}
+
+.search{
+    height: 120vh;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+a, input, textarea{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: white; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    margin: 5px; 
+    transition: background-color 0.3s, color 0.3s;
+    color: black;
+}
+  
+a:hover, input:hover {
+    background-color: #CCCCCC; 
+}
+
+textarea{
+    width: 40%;
+    height: 150px;
+    resize: none;
+}
+
+.edit-button, .delete-button{
+    float: right;
+}
+
+header, footer{
+    clear: both;
+    text-align: center;
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px){
+    .card{
+        flex-basis: 100%;
+    }
+  }

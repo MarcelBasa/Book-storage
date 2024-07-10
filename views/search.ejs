@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <div class="search">
+    <form action="/search" method="POST">
+        <label><b>Title: </b><input type="text" name="Title" placeholder="Title" required/>
+        <input type="submit" value="Search"/>  </label>      
+    </form>
+    <br />
+    <% if(locals.book){ %>
+        <form action="/add" method="POST">
+            <input type="hidden" name="Title" value="<%= book.data.docs[0].title %>">
+            <input type="hidden" name="Author" value="<%= book.data.docs[0].author_name %>">
+            <input type="hidden" name="Date" value="<%= Math.min.apply(null, book.data.docs[0].publish_year.map(Number)) %>">
+            <input type="hidden" name="Cover_id" value="<%= book.data.docs[0].cover_i %>">
+            <p><b>Title:</b> <%= book.data.docs[0].title %></p>
+            <p><b>Author:</b> <%= book.data.docs[0].author_name %></p>
+            <p><b>Release date:</b> <%= Math.min.apply(null, book.data.docs[0].publish_year.map(Number)) %></p>
+            <img src= <%= "https://covers.openlibrary.org/b/id/"+book.data.docs[0].cover_i+"-M.jpg" %> height="270" width="180" alt="Book img"/>
+            <p><b>Note:</b> </p>
+            <textarea type="text" name="Note" placeholder="Note content"></textarea>
+            <br/>
+            <input type="submit" value="Add"/>        
+        </form>
+    <% } %>
+    <% if(locals.error){ %>
+        <p><b><%= error %></b></p>
+    <% } %>
+    </div>
+</body>
+
+<%- include("partials/footer.ejs") %>

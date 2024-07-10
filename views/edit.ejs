@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <div class="search">
+    <p><b>Editing...</b></p>
+    <br/>
+    <% if(locals.book){ %>
+        <form action="/edit/ <%= book.cover_id %>" method="POST">
+            <input type="hidden" name="Title" value="<%= book.title %>">
+            <input type="hidden" name="Author" value="<%= book.author %>">
+            <input type="hidden" name="Date" value="<%= book.data %>">
+            <input type="hidden" name="Cover_id" value="<%= book.cover_id %>">
+            <p><b>Title:</b> <%= book.title %></p>
+            <p><b>Author:</b> <%= book.author %></p>
+            <p><b>Release date:</b> <%= book.data %></p>
+            <img src= <%= "https://covers.openlibrary.org/b/id/"+book.cover_id+"-M.jpg" %> height="270" width="180" alt="Book img"/>
+            <p><b>Note:</b> </p>
+            <textarea type="text" name="Note" placeholder="Note content"><%= book.note %></textarea>
+            <br/>
+            <input type="submit" value="Save"/>        
+        </form>
+    <% } %>
+    <% if(locals.error){ %>
+        <p><b><%= error %></b></p>
+    <% } %>
+    </div>
+</body>
+
+<%- include("partials/footer.ejs") %>
