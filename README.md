@@ -21,7 +21,7 @@ Book Storage is a web application for searching books using a public API and add
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/Book-storage.git
+    git clone https://github.com/MarcelBasa/Book-storage.git
     ```
 2. Navigate to the project directory:
     ```sh
