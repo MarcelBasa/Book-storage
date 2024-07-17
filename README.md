@@ -52,3 +52,4 @@ Book Storage is a web application for searching books using a public API and add
 - The user can view all saved books in their library, update the notes, and remove books as needed.
 
 ![homePage](https://github.com/user-attachments/assets/958c4400-7668-4d74-929a-9304baf5d16e)
+![searchPage](https://github.com/user-attachments/assets/287af6f5-cec3-4a70-a98a-852c765af984)
