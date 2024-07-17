@@ -50,3 +50,5 @@ Book Storage is a web application for searching books using a public API and add
 - Users can search for books by title using the public API www.openlibrary.org.
 - Once a book is found, it can be added to the library personal library with an optional note.
 - The user can view all saved books in their library, update the notes, and remove books as needed.
+
+![homePage](https://github.com/user-attachments/assets/958c4400-7668-4d74-929a-9304baf5d16e)
