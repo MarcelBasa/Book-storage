@@ -10,13 +10,13 @@ Book Storage is a web application for searching books using a public API and add
 - Delete books from the library
 
 ## Technologies
-- **Node.js**: Server-side JavaScript runtime
-- **JavaScript (JS)**: Programming language for the frontend and backend logic
-- **EJS**: Embedded JavaScript templates for rendering dynamic HTML
-- **Express**: Web framework for Node.js
-- **PostgreSQL**: Relational database management system
-- **Axios**: Promise-based HTTP client for making API requests
-- **HTML/CSS**: Markup and styling for the frontend
+- **Node.js**
+- **JavaScript (JS)**
+- **EJS**
+- **Express**
+- **PostgreSQL**
+- **Axios**
+- **HTML/CSS**
 
 ## Installation
 1. Clone the repository:
